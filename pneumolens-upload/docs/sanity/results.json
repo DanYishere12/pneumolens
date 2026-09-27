@@ -1,0 +1,128 @@
+{
+  "checkpoint_sha256": "d88e5a5500da6f3a719186edfb9ce5b80677333324d73dc529c38db54d96b9f3",
+  "manifest_sha256": "e30059a9280cdf38b54aff2fd3218298c4146eb0bf7102df61666724ac17e7dd",
+  "selection": "First two validation filenames per class, sorted lexicographically; no outcome selection.",
+  "seed": 2026,
+  "target": "PNEUMONIA",
+  "n": 4,
+  "protocol": "CPU. Reset fc once, then cumulatively reset layer4 Conv2d and BatchNorm2d parameters and running statistics. Use PyTorch reset_parameters defaults; earlier layers stay trained. Every map is normalized separately. Compare unpadded CAMs on 224x224 grid with Pearson correlation and mean absolute difference.",
+  "border_definition": "Outer 10% of width/height; approximately 36% of image area. Descriptive positive CAM mass fraction, not an anatomical lung mask or artifact detector. Null for zero maps.",
+  "limitations": "Four development images and one random seed. Parameter sensitivity is not proof of faithfulness or medical localization. No random-label training, full-network randomization, or localization annotations. No pass/fail claim.",
+  "reference": "https://proceedings.neurips.cc/paper/2018/hash/294a8ed24b1ad22ec2e7efea049b8737-Abstract.html",
+  "image_source": "https://data.mendeley.com/datasets/rscbjbr9sj/2",
+  "license": "CC BY 4.0; overlays are modified images",
+  "cases": [
+    {
+      "filename": "IM-0117-0001.jpeg",
+      "label": "NORMAL",
+      "split": "val",
+      "variants": {
+        "Trained": {
+          "pearson_correlation": 1.0,
+          "mean_absolute_change": 0.0,
+          "positive_map": true,
+          "pneumonia_score": 2.7914832116948674e-06,
+          "border_mass_fraction": 0.8622482419013977
+        },
+        "Random head": {
+          "pearson_correlation": -0.30961543974676053,
+          "mean_absolute_change": 0.3539704978466034,
+          "positive_map": true,
+          "pneumonia_score": 0.43882253766059875,
+          "border_mass_fraction": 0.11745204776525497
+        },
+        "Random head + layer4": {
+          "pearson_correlation": 0.07846000974301143,
+          "mean_absolute_change": 0.24851994216442108,
+          "positive_map": true,
+          "pneumonia_score": 0.49031299352645874,
+          "border_mass_fraction": 0.32584887742996216
+        }
+      }
+    },
+    {
+      "filename": "IM-0131-0001.jpeg",
+      "label": "NORMAL",
+      "split": "val",
+      "variants": {
+        "Trained": {
+          "pearson_correlation": 0.9999999999999999,
+          "mean_absolute_change": 0.0,
+          "positive_map": true,
+          "pneumonia_score": 0.00032853538868948817,
+          "border_mass_fraction": 0.7157730460166931
+        },
+        "Random head": {
+          "pearson_correlation": -0.08799082740238133,
+          "mean_absolute_change": 0.24540404975414276,
+          "positive_map": true,
+          "pneumonia_score": 0.38207319378852844,
+          "border_mass_fraction": 0.17645706236362457
+        },
+        "Random head + layer4": {
+          "pearson_correlation": -0.0776183177615925,
+          "mean_absolute_change": 0.31692934036254883,
+          "positive_map": true,
+          "pneumonia_score": 0.48982974886894226,
+          "border_mass_fraction": 0.33924898505210876
+        }
+      }
+    },
+    {
+      "filename": "person1002_bacteria_2933.jpeg",
+      "label": "PNEUMONIA",
+      "split": "val",
+      "variants": {
+        "Trained": {
+          "pearson_correlation": 1.0,
+          "mean_absolute_change": 0.0,
+          "positive_map": true,
+          "pneumonia_score": 0.9985106587409973,
+          "border_mass_fraction": 0.303832471370697
+        },
+        "Random head": {
+          "pearson_correlation": 0.6282838111709542,
+          "mean_absolute_change": 0.23795554041862488,
+          "positive_map": true,
+          "pneumonia_score": 0.2611456513404846,
+          "border_mass_fraction": 0.28043800592422485
+        },
+        "Random head + layer4": {
+          "pearson_correlation": 0.42070301667445414,
+          "mean_absolute_change": 0.21066506206989288,
+          "positive_map": true,
+          "pneumonia_score": 0.4905380606651306,
+          "border_mass_fraction": 0.3198811113834381
+        }
+      }
+    },
+    {
+      "filename": "person1003_bacteria_2934.jpeg",
+      "label": "PNEUMONIA",
+      "split": "val",
+      "variants": {
+        "Trained": {
+          "pearson_correlation": 1.0,
+          "mean_absolute_change": 0.0,
+          "positive_map": true,
+          "pneumonia_score": 0.9999959468841553,
+          "border_mass_fraction": 0.30940762162208557
+        },
+        "Random head": {
+          "pearson_correlation": -0.058397524269554496,
+          "mean_absolute_change": 0.3690217435359955,
+          "positive_map": true,
+          "pneumonia_score": 0.23814772069454193,
+          "border_mass_fraction": 0.16671080887317657
+        },
+        "Random head + layer4": {
+          "pearson_correlation": -0.19947788266256777,
+          "mean_absolute_change": 0.25466448068618774,
+          "positive_map": true,
+          "pneumonia_score": 0.4903750717639923,
+          "border_mass_fraction": 0.2592649459838867
+        }
+      }
+    }
+  ]
+}

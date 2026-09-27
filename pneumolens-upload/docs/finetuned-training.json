@@ -1,0 +1,206 @@
+{
+  "seed": 42,
+  "device": "mps",
+  "torch_version": "2.14.0",
+  "selected_epoch": 3,
+  "source_checkpoint_sha256": "b8f9fd3f660df625f7d0e73c1c18bcbfc485193c0d2b5837c16c20e85768c8e2",
+  "initial_validation": {
+    "n": 953,
+    "threshold": 0.5,
+    "accuracy": 0.9706190975865687,
+    "sensitivity": 0.9736842105263158,
+    "specificity": 0.9628252788104089,
+    "precision": 0.985207100591716,
+    "f1": 0.9794117647058823,
+    "roc_auc": 0.9948966281875693,
+    "average_precision": 0.9980871506508824,
+    "brier_score": 0.02306400572825786,
+    "confusion_matrix": [
+      [
+        259,
+        10
+      ],
+      [
+        18,
+        666
+      ]
+    ]
+  },
+  "history": [
+    {
+      "epoch": 1,
+      "weighted_train_loss": 0.08116381347179413,
+      "validation_loss": 0.06242346198562873,
+      "validation": {
+        "n": 953,
+        "threshold": 0.5,
+        "accuracy": 0.9811122770199371,
+        "sensitivity": 0.9839181286549707,
+        "specificity": 0.9739776951672863,
+        "precision": 0.9897058823529412,
+        "f1": 0.9868035190615836,
+        "roc_auc": 0.9965542729189765,
+        "average_precision": 0.9986759378896112,
+        "brier_score": 0.016266953618584698,
+        "confusion_matrix": [
+          [
+            262,
+            7
+          ],
+          [
+            11,
+            673
+          ]
+        ]
+      },
+      "seconds": 41.76
+    },
+    {
+      "epoch": 2,
+      "weighted_train_loss": 0.04262347716642054,
+      "validation_loss": 0.12188367416216343,
+      "validation": {
+        "n": 953,
+        "threshold": 0.5,
+        "accuracy": 0.9538300104931794,
+        "sensitivity": 0.9385964912280702,
+        "specificity": 0.9925650557620818,
+        "precision": 0.9968944099378882,
+        "f1": 0.9668674698795181,
+        "roc_auc": 0.9971140676971239,
+        "average_precision": 0.9988883365533126,
+        "brier_score": 0.033142032437619595,
+        "confusion_matrix": [
+          [
+            267,
+            2
+          ],
+          [
+            42,
+            642
+          ]
+        ]
+      },
+      "seconds": 40.63
+    },
+    {
+      "epoch": 3,
+      "weighted_train_loss": 0.024647327170854338,
+      "validation_loss": 0.05495112393723736,
+      "validation": {
+        "n": 953,
+        "threshold": 0.5,
+        "accuracy": 0.9832109129066107,
+        "sensitivity": 0.9824561403508771,
+        "specificity": 0.9851301115241635,
+        "precision": 0.9940828402366864,
+        "f1": 0.9882352941176471,
+        "roc_auc": 0.9972390704145742,
+        "average_precision": 0.9989390116433301,
+        "brier_score": 0.013553675687347723,
+        "confusion_matrix": [
+          [
+            265,
+            4
+          ],
+          [
+            12,
+            672
+          ]
+        ]
+      },
+      "seconds": 40.82
+    },
+    {
+      "epoch": 4,
+      "weighted_train_loss": 0.01225550193682705,
+      "validation_loss": 0.055316983363986924,
+      "validation": {
+        "n": 953,
+        "threshold": 0.5,
+        "accuracy": 0.9853095487932844,
+        "sensitivity": 0.9853801169590644,
+        "specificity": 0.9851301115241635,
+        "precision": 0.9941002949852508,
+        "f1": 0.9897209985315712,
+        "roc_auc": 0.9972553751168503,
+        "average_precision": 0.9989426856244914,
+        "brier_score": 0.012768301561510686,
+        "confusion_matrix": [
+          [
+            265,
+            4
+          ],
+          [
+            10,
+            674
+          ]
+        ]
+      },
+      "seconds": 39.7
+    },
+    {
+      "epoch": 5,
+      "weighted_train_loss": 0.007821619380816915,
+      "validation_loss": 0.0640677024429793,
+      "validation": {
+        "n": 953,
+        "threshold": 0.5,
+        "accuracy": 0.9832109129066107,
+        "sensitivity": 0.9809941520467836,
+        "specificity": 0.9888475836431226,
+        "precision": 0.9955489614243324,
+        "f1": 0.9882179675994109,
+        "roc_auc": 0.9971303723994001,
+        "average_precision": 0.9989006621195028,
+        "brier_score": 0.014206065352413262,
+        "confusion_matrix": [
+          [
+            266,
+            3
+          ],
+          [
+            13,
+            671
+          ]
+        ]
+      },
+      "seconds": 41.29
+    },
+    {
+      "epoch": 6,
+      "weighted_train_loss": 0.004571697651469884,
+      "validation_loss": 0.07977945597012648,
+      "validation": {
+        "n": 953,
+        "threshold": 0.5,
+        "accuracy": 0.9800629590766002,
+        "sensitivity": 0.9751461988304093,
+        "specificity": 0.9925650557620818,
+        "precision": 0.9970104633781763,
+        "f1": 0.9859571322985957,
+        "roc_auc": 0.9975760342616145,
+        "average_precision": 0.9990611934425554,
+        "brier_score": 0.01671180095187356,
+        "confusion_matrix": [
+          [
+            267,
+            2
+          ],
+          [
+            17,
+            667
+          ]
+        ]
+      },
+      "seconds": 41.1
+    }
+  ],
+  "split_counts": {
+    "train": 3800,
+    "val": 953,
+    "test": 624
+  },
+  "protocol": "docs/finetuning-protocol.md",
+  "complete": true
+}

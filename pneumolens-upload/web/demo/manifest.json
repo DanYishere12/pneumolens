@@ -1,0 +1,666 @@
+{
+  "schema_version": 1,
+  "recorded": true,
+  "selection": "Union of the first example of each outcome per evaluated model, in test manifest order. This selected gallery is not a representative performance sample.",
+  "source": "https://data.mendeley.com/datasets/rscbjbr9sj/2",
+  "license": "CC BY 4.0; resized images and attribution maps are modified versions.",
+  "default_model": "finetuned",
+  "sanity_available": false,
+  "unavailable": [],
+  "models": [
+    {
+      "id": "baseline",
+      "name": "Frozen baseline",
+      "metrics": {
+        "n": 624,
+        "threshold": 0.5,
+        "accuracy": 0.780448717948718,
+        "sensitivity": 0.9897435897435898,
+        "specificity": 0.43162393162393164,
+        "precision": 0.74373795761079,
+        "f1": 0.8492849284928493,
+        "roc_auc": 0.9452224413762875,
+        "average_precision": 0.9596495118884398,
+        "brier_score": 0.16656641058470412,
+        "confusion_matrix": [
+          [
+            101,
+            133
+          ],
+          [
+            4,
+            386
+          ]
+        ],
+        "checkpoint_sha256": "b8f9fd3f660df625f7d0e73c1c18bcbfc485193c0d2b5837c16c20e85768c8e2",
+        "manifest_sha256": "e30059a9280cdf38b54aff2fd3218298c4146eb0bf7102df61666724ac17e7dd",
+        "notes": "Single-dataset image-level evaluation; scores are not calibrated clinical probabilities."
+      },
+      "digest": "b8f9fd3f660df625f7d0e73c1c18bcbfc485193c0d2b5837c16c20e85768c8e2",
+      "counts": {
+        "tn": 101,
+        "fp": 133,
+        "fn": 4,
+        "tp": 386
+      },
+      "gallery_counts": {
+        "tp": 1,
+        "tn": 1,
+        "fp": 1,
+        "fn": 2
+      }
+    },
+    {
+      "id": "finetuned",
+      "name": "Fine-tuned ResNet-18",
+      "metrics": {
+        "n": 624,
+        "threshold": 0.5,
+        "accuracy": 0.7884615384615384,
+        "sensitivity": 0.9974358974358974,
+        "specificity": 0.44017094017094016,
+        "precision": 0.7480769230769231,
+        "f1": 0.8549450549450549,
+        "roc_auc": 0.9546022353714662,
+        "average_precision": 0.964326162821387,
+        "brier_score": 0.1788807845067063,
+        "confusion_matrix": [
+          [
+            103,
+            131
+          ],
+          [
+            1,
+            389
+          ]
+        ],
+        "checkpoint_sha256": "d88e5a5500da6f3a719186edfb9ce5b80677333324d73dc529c38db54d96b9f3",
+        "manifest_sha256": "e30059a9280cdf38b54aff2fd3218298c4146eb0bf7102df61666724ac17e7dd",
+        "notes": "Single-dataset image-level evaluation; scores are not calibrated clinical probabilities. Exploratory comparison on the test partition already examined for the baseline; not independent validation.",
+        "test_set_reused": true
+      },
+      "digest": "d88e5a5500da6f3a719186edfb9ce5b80677333324d73dc529c38db54d96b9f3",
+      "counts": {
+        "tn": 103,
+        "fp": 131,
+        "fn": 1,
+        "tp": 389
+      },
+      "gallery_counts": {
+        "tp": 2,
+        "tn": 1,
+        "fp": 1,
+        "fn": 1
+      }
+    }
+  ],
+  "cases": {
+    "baseline": [
+      {
+        "id": "7b2ca9cc2bfb7572",
+        "filename": "IM-0001-0001.jpeg",
+        "label": "NORMAL",
+        "prediction": "PNEUMONIA",
+        "score": 0.6551951766014099,
+        "outcome": "fp",
+        "thumbnail": "/demo/assets/7b2ca9cc2bfb7572.png"
+      },
+      {
+        "id": "d4fbe565f9dbe1ca",
+        "filename": "IM-0007-0001.jpeg",
+        "label": "NORMAL",
+        "prediction": "NORMAL",
+        "score": 0.3894699215888977,
+        "outcome": "tn",
+        "thumbnail": "/demo/assets/d4fbe565f9dbe1ca.png"
+      },
+      {
+        "id": "ac4778fd46b5759d",
+        "filename": "person100_bacteria_475.jpeg",
+        "label": "PNEUMONIA",
+        "prediction": "PNEUMONIA",
+        "score": 0.9906291365623474,
+        "outcome": "tp",
+        "thumbnail": "/demo/assets/ac4778fd46b5759d.png"
+      },
+      {
+        "id": "ff02cfbe13071fb7",
+        "filename": "person153_bacteria_726.jpeg",
+        "label": "PNEUMONIA",
+        "prediction": "NORMAL",
+        "score": 0.4916703701019287,
+        "outcome": "fn",
+        "thumbnail": "/demo/assets/ff02cfbe13071fb7.png"
+      },
+      {
+        "id": "ee5e8727afd4569e",
+        "filename": "person154_bacteria_728.jpeg",
+        "label": "PNEUMONIA",
+        "prediction": "NORMAL",
+        "score": 0.11604291200637817,
+        "outcome": "fn",
+        "thumbnail": "/demo/assets/ee5e8727afd4569e.png"
+      }
+    ],
+    "finetuned": [
+      {
+        "id": "7b2ca9cc2bfb7572",
+        "filename": "IM-0001-0001.jpeg",
+        "label": "NORMAL",
+        "prediction": "PNEUMONIA",
+        "score": 0.9194818139076233,
+        "outcome": "fp",
+        "thumbnail": "/demo/assets/7b2ca9cc2bfb7572.png"
+      },
+      {
+        "id": "d4fbe565f9dbe1ca",
+        "filename": "IM-0007-0001.jpeg",
+        "label": "NORMAL",
+        "prediction": "NORMAL",
+        "score": 0.20994322001934052,
+        "outcome": "tn",
+        "thumbnail": "/demo/assets/d4fbe565f9dbe1ca.png"
+      },
+      {
+        "id": "ac4778fd46b5759d",
+        "filename": "person100_bacteria_475.jpeg",
+        "label": "PNEUMONIA",
+        "prediction": "PNEUMONIA",
+        "score": 0.9999102354049683,
+        "outcome": "tp",
+        "thumbnail": "/demo/assets/ac4778fd46b5759d.png"
+      },
+      {
+        "id": "ff02cfbe13071fb7",
+        "filename": "person153_bacteria_726.jpeg",
+        "label": "PNEUMONIA",
+        "prediction": "PNEUMONIA",
+        "score": 0.9093994498252869,
+        "outcome": "tp",
+        "thumbnail": "/demo/assets/ff02cfbe13071fb7.png"
+      },
+      {
+        "id": "ee5e8727afd4569e",
+        "filename": "person154_bacteria_728.jpeg",
+        "label": "PNEUMONIA",
+        "prediction": "NORMAL",
+        "score": 0.09640589356422424,
+        "outcome": "fn",
+        "thumbnail": "/demo/assets/ee5e8727afd4569e.png"
+      }
+    ]
+  },
+  "analyses": {
+    "baseline": {
+      "7b2ca9cc2bfb7572": {
+        "NORMAL": {
+          "model": "baseline",
+          "model_name": "Frozen baseline",
+          "checkpoint_sha256": "b8f9fd3f660df625f7d0e73c1c18bcbfc485193c0d2b5837c16c20e85768c8e2",
+          "filename": "IM-0001-0001.jpeg",
+          "label": "NORMAL",
+          "target": "NORMAL",
+          "prediction": "PNEUMONIA",
+          "score": 0.6551957130432129,
+          "threshold": 0.5,
+          "width": 1280,
+          "height": 908,
+          "source_size": [
+            1857,
+            1317
+          ],
+          "image": "/demo/assets/7b2ca9cc2bfb7572.png",
+          "cam": "/demo/assets/7b2ca9cc2bfb7572-baseline-normal.png",
+          "has_activation": true,
+          "recorded": true
+        },
+        "PNEUMONIA": {
+          "model": "baseline",
+          "model_name": "Frozen baseline",
+          "checkpoint_sha256": "b8f9fd3f660df625f7d0e73c1c18bcbfc485193c0d2b5837c16c20e85768c8e2",
+          "filename": "IM-0001-0001.jpeg",
+          "label": "NORMAL",
+          "target": "PNEUMONIA",
+          "prediction": "PNEUMONIA",
+          "score": 0.6551957130432129,
+          "threshold": 0.5,
+          "width": 1280,
+          "height": 908,
+          "source_size": [
+            1857,
+            1317
+          ],
+          "image": "/demo/assets/7b2ca9cc2bfb7572.png",
+          "cam": "/demo/assets/7b2ca9cc2bfb7572-baseline-pneumonia.png",
+          "has_activation": true,
+          "recorded": true
+        }
+      },
+      "d4fbe565f9dbe1ca": {
+        "NORMAL": {
+          "model": "baseline",
+          "model_name": "Frozen baseline",
+          "checkpoint_sha256": "b8f9fd3f660df625f7d0e73c1c18bcbfc485193c0d2b5837c16c20e85768c8e2",
+          "filename": "IM-0007-0001.jpeg",
+          "label": "NORMAL",
+          "target": "NORMAL",
+          "prediction": "NORMAL",
+          "score": 0.3894713521003723,
+          "threshold": 0.5,
+          "width": 1280,
+          "height": 1133,
+          "source_size": [
+            2053,
+            1818
+          ],
+          "image": "/demo/assets/d4fbe565f9dbe1ca.png",
+          "cam": "/demo/assets/d4fbe565f9dbe1ca-baseline-normal.png",
+          "has_activation": true,
+          "recorded": true
+        },
+        "PNEUMONIA": {
+          "model": "baseline",
+          "model_name": "Frozen baseline",
+          "checkpoint_sha256": "b8f9fd3f660df625f7d0e73c1c18bcbfc485193c0d2b5837c16c20e85768c8e2",
+          "filename": "IM-0007-0001.jpeg",
+          "label": "NORMAL",
+          "target": "PNEUMONIA",
+          "prediction": "NORMAL",
+          "score": 0.3894713521003723,
+          "threshold": 0.5,
+          "width": 1280,
+          "height": 1133,
+          "source_size": [
+            2053,
+            1818
+          ],
+          "image": "/demo/assets/d4fbe565f9dbe1ca.png",
+          "cam": "/demo/assets/d4fbe565f9dbe1ca-baseline-pneumonia.png",
+          "has_activation": true,
+          "recorded": true
+        }
+      },
+      "ac4778fd46b5759d": {
+        "NORMAL": {
+          "model": "baseline",
+          "model_name": "Frozen baseline",
+          "checkpoint_sha256": "b8f9fd3f660df625f7d0e73c1c18bcbfc485193c0d2b5837c16c20e85768c8e2",
+          "filename": "person100_bacteria_475.jpeg",
+          "label": "PNEUMONIA",
+          "target": "NORMAL",
+          "prediction": "PNEUMONIA",
+          "score": 0.9906290173530579,
+          "threshold": 0.5,
+          "width": 1106,
+          "height": 762,
+          "source_size": [
+            1106,
+            762
+          ],
+          "image": "/demo/assets/ac4778fd46b5759d.png",
+          "cam": "/demo/assets/ac4778fd46b5759d-baseline-normal.png",
+          "has_activation": true,
+          "recorded": true
+        },
+        "PNEUMONIA": {
+          "model": "baseline",
+          "model_name": "Frozen baseline",
+          "checkpoint_sha256": "b8f9fd3f660df625f7d0e73c1c18bcbfc485193c0d2b5837c16c20e85768c8e2",
+          "filename": "person100_bacteria_475.jpeg",
+          "label": "PNEUMONIA",
+          "target": "PNEUMONIA",
+          "prediction": "PNEUMONIA",
+          "score": 0.9906290173530579,
+          "threshold": 0.5,
+          "width": 1106,
+          "height": 762,
+          "source_size": [
+            1106,
+            762
+          ],
+          "image": "/demo/assets/ac4778fd46b5759d.png",
+          "cam": "/demo/assets/ac4778fd46b5759d-baseline-pneumonia.png",
+          "has_activation": true,
+          "recorded": true
+        }
+      },
+      "ff02cfbe13071fb7": {
+        "NORMAL": {
+          "model": "baseline",
+          "model_name": "Frozen baseline",
+          "checkpoint_sha256": "b8f9fd3f660df625f7d0e73c1c18bcbfc485193c0d2b5837c16c20e85768c8e2",
+          "filename": "person153_bacteria_726.jpeg",
+          "label": "PNEUMONIA",
+          "target": "NORMAL",
+          "prediction": "NORMAL",
+          "score": 0.49167242646217346,
+          "threshold": 0.5,
+          "width": 1280,
+          "height": 815,
+          "source_size": [
+            1720,
+            1095
+          ],
+          "image": "/demo/assets/ff02cfbe13071fb7.png",
+          "cam": "/demo/assets/ff02cfbe13071fb7-baseline-normal.png",
+          "has_activation": true,
+          "recorded": true
+        },
+        "PNEUMONIA": {
+          "model": "baseline",
+          "model_name": "Frozen baseline",
+          "checkpoint_sha256": "b8f9fd3f660df625f7d0e73c1c18bcbfc485193c0d2b5837c16c20e85768c8e2",
+          "filename": "person153_bacteria_726.jpeg",
+          "label": "PNEUMONIA",
+          "target": "PNEUMONIA",
+          "prediction": "NORMAL",
+          "score": 0.49167242646217346,
+          "threshold": 0.5,
+          "width": 1280,
+          "height": 815,
+          "source_size": [
+            1720,
+            1095
+          ],
+          "image": "/demo/assets/ff02cfbe13071fb7.png",
+          "cam": "/demo/assets/ff02cfbe13071fb7-baseline-pneumonia.png",
+          "has_activation": true,
+          "recorded": true
+        }
+      },
+      "ee5e8727afd4569e": {
+        "NORMAL": {
+          "model": "baseline",
+          "model_name": "Frozen baseline",
+          "checkpoint_sha256": "b8f9fd3f660df625f7d0e73c1c18bcbfc485193c0d2b5837c16c20e85768c8e2",
+          "filename": "person154_bacteria_728.jpeg",
+          "label": "PNEUMONIA",
+          "target": "NORMAL",
+          "prediction": "NORMAL",
+          "score": 0.1160430908203125,
+          "threshold": 0.5,
+          "width": 1280,
+          "height": 1001,
+          "source_size": [
+            1558,
+            1218
+          ],
+          "image": "/demo/assets/ee5e8727afd4569e.png",
+          "cam": "/demo/assets/ee5e8727afd4569e-baseline-normal.png",
+          "has_activation": true,
+          "recorded": true
+        },
+        "PNEUMONIA": {
+          "model": "baseline",
+          "model_name": "Frozen baseline",
+          "checkpoint_sha256": "b8f9fd3f660df625f7d0e73c1c18bcbfc485193c0d2b5837c16c20e85768c8e2",
+          "filename": "person154_bacteria_728.jpeg",
+          "label": "PNEUMONIA",
+          "target": "PNEUMONIA",
+          "prediction": "NORMAL",
+          "score": 0.1160430908203125,
+          "threshold": 0.5,
+          "width": 1280,
+          "height": 1001,
+          "source_size": [
+            1558,
+            1218
+          ],
+          "image": "/demo/assets/ee5e8727afd4569e.png",
+          "cam": "/demo/assets/ee5e8727afd4569e-baseline-pneumonia.png",
+          "has_activation": true,
+          "recorded": true
+        }
+      }
+    },
+    "finetuned": {
+      "7b2ca9cc2bfb7572": {
+        "NORMAL": {
+          "model": "finetuned",
+          "model_name": "Fine-tuned ResNet-18",
+          "checkpoint_sha256": "d88e5a5500da6f3a719186edfb9ce5b80677333324d73dc529c38db54d96b9f3",
+          "filename": "IM-0001-0001.jpeg",
+          "label": "NORMAL",
+          "target": "NORMAL",
+          "prediction": "PNEUMONIA",
+          "score": 0.9194822907447815,
+          "threshold": 0.5,
+          "width": 1280,
+          "height": 908,
+          "source_size": [
+            1857,
+            1317
+          ],
+          "image": "/demo/assets/7b2ca9cc2bfb7572.png",
+          "cam": "/demo/assets/7b2ca9cc2bfb7572-finetuned-normal.png",
+          "has_activation": true,
+          "recorded": true
+        },
+        "PNEUMONIA": {
+          "model": "finetuned",
+          "model_name": "Fine-tuned ResNet-18",
+          "checkpoint_sha256": "d88e5a5500da6f3a719186edfb9ce5b80677333324d73dc529c38db54d96b9f3",
+          "filename": "IM-0001-0001.jpeg",
+          "label": "NORMAL",
+          "target": "PNEUMONIA",
+          "prediction": "PNEUMONIA",
+          "score": 0.9194822907447815,
+          "threshold": 0.5,
+          "width": 1280,
+          "height": 908,
+          "source_size": [
+            1857,
+            1317
+          ],
+          "image": "/demo/assets/7b2ca9cc2bfb7572.png",
+          "cam": "/demo/assets/7b2ca9cc2bfb7572-finetuned-pneumonia.png",
+          "has_activation": true,
+          "recorded": true
+        }
+      },
+      "d4fbe565f9dbe1ca": {
+        "NORMAL": {
+          "model": "finetuned",
+          "model_name": "Fine-tuned ResNet-18",
+          "checkpoint_sha256": "d88e5a5500da6f3a719186edfb9ce5b80677333324d73dc529c38db54d96b9f3",
+          "filename": "IM-0007-0001.jpeg",
+          "label": "NORMAL",
+          "target": "NORMAL",
+          "prediction": "NORMAL",
+          "score": 0.20994266867637634,
+          "threshold": 0.5,
+          "width": 1280,
+          "height": 1133,
+          "source_size": [
+            2053,
+            1818
+          ],
+          "image": "/demo/assets/d4fbe565f9dbe1ca.png",
+          "cam": "/demo/assets/d4fbe565f9dbe1ca-finetuned-normal.png",
+          "has_activation": true,
+          "recorded": true
+        },
+        "PNEUMONIA": {
+          "model": "finetuned",
+          "model_name": "Fine-tuned ResNet-18",
+          "checkpoint_sha256": "d88e5a5500da6f3a719186edfb9ce5b80677333324d73dc529c38db54d96b9f3",
+          "filename": "IM-0007-0001.jpeg",
+          "label": "NORMAL",
+          "target": "PNEUMONIA",
+          "prediction": "NORMAL",
+          "score": 0.20994266867637634,
+          "threshold": 0.5,
+          "width": 1280,
+          "height": 1133,
+          "source_size": [
+            2053,
+            1818
+          ],
+          "image": "/demo/assets/d4fbe565f9dbe1ca.png",
+          "cam": "/demo/assets/d4fbe565f9dbe1ca-finetuned-pneumonia.png",
+          "has_activation": true,
+          "recorded": true
+        }
+      },
+      "ac4778fd46b5759d": {
+        "NORMAL": {
+          "model": "finetuned",
+          "model_name": "Fine-tuned ResNet-18",
+          "checkpoint_sha256": "d88e5a5500da6f3a719186edfb9ce5b80677333324d73dc529c38db54d96b9f3",
+          "filename": "person100_bacteria_475.jpeg",
+          "label": "PNEUMONIA",
+          "target": "NORMAL",
+          "prediction": "PNEUMONIA",
+          "score": 0.9999102354049683,
+          "threshold": 0.5,
+          "width": 1106,
+          "height": 762,
+          "source_size": [
+            1106,
+            762
+          ],
+          "image": "/demo/assets/ac4778fd46b5759d.png",
+          "cam": "/demo/assets/ac4778fd46b5759d-finetuned-normal.png",
+          "has_activation": false,
+          "recorded": true
+        },
+        "PNEUMONIA": {
+          "model": "finetuned",
+          "model_name": "Fine-tuned ResNet-18",
+          "checkpoint_sha256": "d88e5a5500da6f3a719186edfb9ce5b80677333324d73dc529c38db54d96b9f3",
+          "filename": "person100_bacteria_475.jpeg",
+          "label": "PNEUMONIA",
+          "target": "PNEUMONIA",
+          "prediction": "PNEUMONIA",
+          "score": 0.9999102354049683,
+          "threshold": 0.5,
+          "width": 1106,
+          "height": 762,
+          "source_size": [
+            1106,
+            762
+          ],
+          "image": "/demo/assets/ac4778fd46b5759d.png",
+          "cam": "/demo/assets/ac4778fd46b5759d-finetuned-pneumonia.png",
+          "has_activation": true,
+          "recorded": true
+        }
+      },
+      "ff02cfbe13071fb7": {
+        "NORMAL": {
+          "model": "finetuned",
+          "model_name": "Fine-tuned ResNet-18",
+          "checkpoint_sha256": "d88e5a5500da6f3a719186edfb9ce5b80677333324d73dc529c38db54d96b9f3",
+          "filename": "person153_bacteria_726.jpeg",
+          "label": "PNEUMONIA",
+          "target": "NORMAL",
+          "prediction": "PNEUMONIA",
+          "score": 0.9094001650810242,
+          "threshold": 0.5,
+          "width": 1280,
+          "height": 815,
+          "source_size": [
+            1720,
+            1095
+          ],
+          "image": "/demo/assets/ff02cfbe13071fb7.png",
+          "cam": "/demo/assets/ff02cfbe13071fb7-finetuned-normal.png",
+          "has_activation": true,
+          "recorded": true
+        },
+        "PNEUMONIA": {
+          "model": "finetuned",
+          "model_name": "Fine-tuned ResNet-18",
+          "checkpoint_sha256": "d88e5a5500da6f3a719186edfb9ce5b80677333324d73dc529c38db54d96b9f3",
+          "filename": "person153_bacteria_726.jpeg",
+          "label": "PNEUMONIA",
+          "target": "PNEUMONIA",
+          "prediction": "PNEUMONIA",
+          "score": 0.9094001650810242,
+          "threshold": 0.5,
+          "width": 1280,
+          "height": 815,
+          "source_size": [
+            1720,
+            1095
+          ],
+          "image": "/demo/assets/ff02cfbe13071fb7.png",
+          "cam": "/demo/assets/ff02cfbe13071fb7-finetuned-pneumonia.png",
+          "has_activation": true,
+          "recorded": true
+        }
+      },
+      "ee5e8727afd4569e": {
+        "NORMAL": {
+          "model": "finetuned",
+          "model_name": "Fine-tuned ResNet-18",
+          "checkpoint_sha256": "d88e5a5500da6f3a719186edfb9ce5b80677333324d73dc529c38db54d96b9f3",
+          "filename": "person154_bacteria_728.jpeg",
+          "label": "PNEUMONIA",
+          "target": "NORMAL",
+          "prediction": "NORMAL",
+          "score": 0.09640596807003021,
+          "threshold": 0.5,
+          "width": 1280,
+          "height": 1001,
+          "source_size": [
+            1558,
+            1218
+          ],
+          "image": "/demo/assets/ee5e8727afd4569e.png",
+          "cam": "/demo/assets/ee5e8727afd4569e-finetuned-normal.png",
+          "has_activation": true,
+          "recorded": true
+        },
+        "PNEUMONIA": {
+          "model": "finetuned",
+          "model_name": "Fine-tuned ResNet-18",
+          "checkpoint_sha256": "d88e5a5500da6f3a719186edfb9ce5b80677333324d73dc529c38db54d96b9f3",
+          "filename": "person154_bacteria_728.jpeg",
+          "label": "PNEUMONIA",
+          "target": "PNEUMONIA",
+          "prediction": "NORMAL",
+          "score": 0.09640596807003021,
+          "threshold": 0.5,
+          "width": 1280,
+          "height": 1001,
+          "source_size": [
+            1558,
+            1218
+          ],
+          "image": "/demo/assets/ee5e8727afd4569e.png",
+          "cam": "/demo/assets/ee5e8727afd4569e-finetuned-pneumonia.png",
+          "has_activation": true,
+          "recorded": true
+        }
+      }
+    }
+  },
+  "assets_sha256": {
+    "assets/7b2ca9cc2bfb7572.png": "648bf41ce6cf8e232e1b17e5c6bed38930010a219e17445c98ba597e4747c00f",
+    "assets/7b2ca9cc2bfb7572-baseline-normal.png": "eb97ba08bb9f774c1837d7712b909f54c7dc8ab513428be67ea4bfe138ae5b24",
+    "assets/7b2ca9cc2bfb7572-baseline-pneumonia.png": "4dc762acb681571e7bf52c48013261768e24a6d0d3df1f62d378f0ee49445e47",
+    "assets/d4fbe565f9dbe1ca.png": "af56cd5b008263cdbef740fd3c7c8c25ff08a51d4f46f97d7bd64c874e59c3a3",
+    "assets/d4fbe565f9dbe1ca-baseline-normal.png": "3c04353ac2024a05c5740649a7d32db114e89359ab27106af6cba13ea56c4a79",
+    "assets/d4fbe565f9dbe1ca-baseline-pneumonia.png": "5b92bf24241914899c33bbfe5461ca5983d1dfda66fd0989bc23ed1a8dd4b869",
+    "assets/ac4778fd46b5759d.png": "05e6a0317647c154be841d00ce8b1228905981ae7c6ba7e42c0e94b9502e4ba0",
+    "assets/ac4778fd46b5759d-baseline-normal.png": "d4def10e303fe9e5986553cf9f2a8c9efdb540baf411a3326c181779a4aa5b55",
+    "assets/ac4778fd46b5759d-baseline-pneumonia.png": "4f17e87d7520458e57e474c81719fdf02c64f89d69a1ca61d8e45298f708b402",
+    "assets/ff02cfbe13071fb7.png": "1601afd2d66d240307c54e02af62517155ab247d90b68eaf290cf075c9524b64",
+    "assets/ff02cfbe13071fb7-baseline-normal.png": "fad607bea282a1638a35f25452453c38e009b19a1ca9b4dad31090ff3686e82c",
+    "assets/ff02cfbe13071fb7-baseline-pneumonia.png": "ebb364203938bfb0428492a48cc5b27f959bd6c0294cd9d14edd4f9597fc9990",
+    "assets/ee5e8727afd4569e.png": "3430ec882d5bcfaf42bfb518650e70fdd94c2efb82a7f3a8682ef01f384d2aef",
+    "assets/ee5e8727afd4569e-baseline-normal.png": "b14b0f8e73d93d6d0a8f86a60cf84fb713738656b3f0cff5a0e4d9922f0ec4db",
+    "assets/ee5e8727afd4569e-baseline-pneumonia.png": "3160fd9b4d0a8feffac58bcb880426f9e057f598ed5867b84ab7526d040d07c9",
+    "assets/7b2ca9cc2bfb7572-finetuned-normal.png": "49f5934db0bba227f68535c64db73417602f643b0fe59f0e7b61c76d0e6a2610",
+    "assets/7b2ca9cc2bfb7572-finetuned-pneumonia.png": "8c9f1f6e5da5389f4839c8107a171b4602feb1a43c50c6eb06771681e983f755",
+    "assets/d4fbe565f9dbe1ca-finetuned-normal.png": "2c1431b6dc2293e875e50981e9d2e0025cafdf8d954604d7f0fcacaab1950277",
+    "assets/d4fbe565f9dbe1ca-finetuned-pneumonia.png": "a45d45ef2dea1de6e4d7e0c2c92ce2695c5d2ffbd67163c7c2d74eeb5bc355da",
+    "assets/ac4778fd46b5759d-finetuned-normal.png": "5990d69d5279ed586cb00a939c43d5c9dd1c8b64ef03c9d013b3ae93aca9ec36",
+    "assets/ac4778fd46b5759d-finetuned-pneumonia.png": "da15adb938fb509e94efadb1b380cf99b948fb415b8b3fec00a557a2d93c1781",
+    "assets/ff02cfbe13071fb7-finetuned-normal.png": "9a32be6607e882667213901afda50801280aa5611e929f39236a5c73ba1d3d37",
+    "assets/ff02cfbe13071fb7-finetuned-pneumonia.png": "bca8780083740d93fb8969c67b5c6c3da18b82edef2d955cb176c2c075558a55",
+    "assets/ee5e8727afd4569e-finetuned-normal.png": "3f3cdbe8935da945844e5948fab214d9f00fbf4f0206816aae39e1564e24f065",
+    "assets/ee5e8727afd4569e-finetuned-pneumonia.png": "1ba4b09dbccc081491cdc279b18b1f633e3b1dd090a43c8a1e9d227a9a5710b3"
+  }
+}

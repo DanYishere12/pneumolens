@@ -1,0 +1,17 @@
+{
+  "source": "https://data.mendeley.com/datasets/rscbjbr9sj/2",
+  "mirror": "https://www.kaggle.com/datasets/paultimothymooney/chest-xray-pneumonia",
+  "seed": 42,
+  "removed_development_overlap": 457,
+  "removed_development_duplicates": 22,
+  "counts": {
+    "train/NORMAL": 1079,
+    "val/NORMAL": 269,
+    "train/PNEUMONIA": 2721,
+    "val/PNEUMONIA": 684,
+    "test/NORMAL": 234,
+    "test/PNEUMONIA": 390
+  },
+  "grouping": "Conservative filename-derived groups; true patient identity across naming families is unverified.",
+  "split_method": "Preserve supplied test; pool train/val then stratify filename groups into 80/20 development split."
+}

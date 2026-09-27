@@ -1,0 +1,42 @@
+[
+  {
+    "name": "Pneumonia \u00b7 correctly classified",
+    "image": "docs/examples/true-positive.jpeg",
+    "label": "PNEUMONIA",
+    "original_filename": "person100_bacteria_475.jpeg",
+    "pneumonia_score": 0.9906291365623474,
+    "selection": "First matching outcome in deterministic test manifest order",
+    "source": "https://data.mendeley.com/datasets/rscbjbr9sj/2",
+    "license": "CC BY 4.0"
+  },
+  {
+    "name": "Normal \u00b7 correctly classified",
+    "image": "docs/examples/true-negative.jpeg",
+    "label": "NORMAL",
+    "original_filename": "IM-0007-0001.jpeg",
+    "pneumonia_score": 0.3894699215888977,
+    "selection": "First matching outcome in deterministic test manifest order",
+    "source": "https://data.mendeley.com/datasets/rscbjbr9sj/2",
+    "license": "CC BY 4.0"
+  },
+  {
+    "name": "Normal \u00b7 false positive",
+    "image": "docs/examples/false-positive.jpeg",
+    "label": "NORMAL",
+    "original_filename": "IM-0001-0001.jpeg",
+    "pneumonia_score": 0.6551951766014099,
+    "selection": "First matching outcome in deterministic test manifest order",
+    "source": "https://data.mendeley.com/datasets/rscbjbr9sj/2",
+    "license": "CC BY 4.0"
+  },
+  {
+    "name": "Pneumonia \u00b7 false negative",
+    "image": "docs/examples/false-negative.jpeg",
+    "label": "PNEUMONIA",
+    "original_filename": "person153_bacteria_726.jpeg",
+    "pneumonia_score": 0.4916703701019287,
+    "selection": "First matching outcome in deterministic test manifest order",
+    "source": "https://data.mendeley.com/datasets/rscbjbr9sj/2",
+    "license": "CC BY 4.0"
+  }
+]

@@ -1,0 +1,7 @@
+{
+  "source_archive": "Kaggle paultimothymooney/chest-xray-pneumonia",
+  "sha256": "f569fe885b0f921e836f3d6bcc8d7b3442f5e0ca4db4533d06b8cf25d2114ea1",
+  "bytes": 2463365435,
+  "extracted_images": 5856,
+  "note": "Only chest_xray/train,val,test extracted; duplicate trees and macOS metadata excluded."
+}

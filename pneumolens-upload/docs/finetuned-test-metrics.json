@@ -1,0 +1,26 @@
+{
+  "n": 624,
+  "threshold": 0.5,
+  "accuracy": 0.7884615384615384,
+  "sensitivity": 0.9974358974358974,
+  "specificity": 0.44017094017094016,
+  "precision": 0.7480769230769231,
+  "f1": 0.8549450549450549,
+  "roc_auc": 0.9546022353714662,
+  "average_precision": 0.964326162821387,
+  "brier_score": 0.1788807845067063,
+  "confusion_matrix": [
+    [
+      103,
+      131
+    ],
+    [
+      1,
+      389
+    ]
+  ],
+  "checkpoint_sha256": "d88e5a5500da6f3a719186edfb9ce5b80677333324d73dc529c38db54d96b9f3",
+  "manifest_sha256": "e30059a9280cdf38b54aff2fd3218298c4146eb0bf7102df61666724ac17e7dd",
+  "notes": "Single-dataset image-level evaluation; scores are not calibrated clinical probabilities. Exploratory comparison on the test partition already examined for the baseline; not independent validation.",
+  "test_set_reused": true
+}

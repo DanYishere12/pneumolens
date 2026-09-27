@@ -1,0 +1,47 @@
+{
+  "historical_baseline": {
+    "core_tests": "9 passed",
+    "app_checks": [
+      "Initial screen",
+      "Trained example inference",
+      "Class-specific Grad-CAM changes without changing classification",
+      "False-negative example",
+      "Overlay opacity control"
+    ],
+    "dataset_images": 5856,
+    "train": 3800,
+    "validation": 953,
+    "test": 624,
+    "checkpoint_epoch": 11,
+    "evaluation": "docs/test-metrics.json",
+    "notes": "Local browser layout inspected. First-run dependency import stalled, then recovered on restart."
+  },
+  "portfolio_pass": {
+    "python_tests": 16,
+    "javascript_tests": 6,
+    "recorded_scans": 5,
+    "recorded_models": 2,
+    "mobile_viewport_width": 390,
+    "desktop_viewport_width": 1280,
+    "export_dimensions": [
+      1106,
+      923
+    ],
+    "model_retrained": false,
+    "details": "docs/verification.md"
+  },
+  "ui_refresh": {
+    "date": "2026-09-17",
+    "theme": "light surfaces and teal accents with a dark X-ray viewer",
+    "full_app_rendered_widths": [
+      1280,
+      768,
+      390
+    ],
+    "recorded_demo_narrow_width": 354,
+    "horizontal_overflow_observed": false,
+    "model_retrained": false,
+    "automated_suites_rerun": false,
+    "details": "docs/verification.md"
+  }
+}
